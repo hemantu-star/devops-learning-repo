@@ -1,0 +1,14 @@
+name: First DevOps Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  greet:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Print Welcome Message
+      run: echo "Hello ${{ vars.STUDENT_NAME }}! Your GitHub Action is working successfully."
